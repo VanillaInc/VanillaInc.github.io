@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vanilla</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script type="module">
+            import { AnimatedSpinner } from '/js/AnimatedSpinner.mjs';
+        </script>
+		
+        <script type="module">
+            import { RandomSpinner } from '/js/RandomSpinner.mjs';
+        </script>
+
+        <!-- <embed type="text/html" src="header.html" height="64px"> -->
+
+        <!-- <iframe src="header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe> -->
+        <!-- <div w3-include-html="header.html"></div> -->
+        <!-- <script src="w3-include-HTML.js"></script> -->
+        <header>
+            <img id="icon" src="logo.png">
+            <div id="name">vanilla.plus</div>
+        </header>
+
+        <script type="text/javascript">
+
+            let frames = ['🕛','🕐','🕑','🕒','🕓','🕔','🕕','🕖','🕗','🕘','🕙','🕚'];
+
+            // Animated spinner
+
+            const animatedSpinnerDiv = document.createElement(`div`);
+
+            document.body.appendChild(animatedSpinnerDiv);
+
+            let animatedSpinner = new AnimatedSpinner(
+                100,
+                frameString => animatedSpinnerDiv.innerText = frameString,
+                frames);
+
+            animatedSpinner.play();
+
+            // Random spinner
+
+            const randomSpinnerDiv = document.createElement(`div`);
+
+            document.body.appendChild(randomSpinnerDiv);
+
+            let randomSpinner = new AnimatedSpinner(
+                100,
+                frameString => randomSpinnerDiv.innerText = frameString,
+                frames);
+
+            randomSpinner.play();
+        </script>
+
+        <main>
+            <div class="panel">
+                Don't look at me, I'm just the content! 🤷‍♂️ 
+            </div>
+
+            <div class="panel">
+                Me too, yeah, I was just looking around...
+            </div>
+
+            <!-- <embed type="text/html" src="context.html"> -->
+
+            <!-- <div class="panel">
+                <button onclick="getElementById('date').innerHTML = Date()">What is the time?</button>
+            </div> -->
+        </main>
+
+        <!-- <script>
+        const tick = () => 
+        {
+            console.log("tick");
+        }
+
+        window.requestAnimationFrame(tick);
+        </script> -->
+            
+        <!-- <embed type="text/html" src="footer.html"> -->
+
+        <footer id="footer">
+            2021
+        </footer>
+
+        <!-- <script> -->
+            <!-- document.getElementById('footer').innerHTML = Date() -->
+        <!-- </script> -->
+    </body>
+</html>

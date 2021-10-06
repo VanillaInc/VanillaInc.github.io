@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100;0,500;1,400&display=swap');
+
+*
+{
+    background-color: #011c20;
+    color:white;
+    width: auto;
+    margin:0;
+    padding:0;
+    font-family: 'Azeret Mono', monospace;
+    font-size:14px;
+}
+
+header
+{
+    left: 0;
+    top: 0;
+    background-color: #08a4bf;
+    height:64px;
+    box-shadow:-8px 8px 2px #001113;
+}
+
+header #icon 
+{
+    background-color:inherit;
+    position:relative;
+    padding: 8px;
+    margin: 8px;
+    float:left;
+    width: 32px;
+    height: 32px;
+}
+
+header #name
+{
+    background-color: inherit;
+    height: 100%;
+    display : flex;
+    align-items : center;
+    font-size: 24px;
+}
+
+.panel
+{
+    background-color: #08a4bf;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    box-shadow:-8px 8px 2px #001113;
+}
+
+footer
+{
+    position: fixed;
+    width:100%;
+    left: 0;
+    bottom: 0;
+    background-color: #08a4bf;
+    color: white;
+    display : flex;
+    align-items : center;
+    height:32px;
+}
